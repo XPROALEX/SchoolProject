@@ -1,0 +1,4 @@
+Bundle-Name: MemberList
+Bundle-SymbolicName: memberlist
+Bundle-Version: 1.0.0
+Export-Package: memberlist.constants

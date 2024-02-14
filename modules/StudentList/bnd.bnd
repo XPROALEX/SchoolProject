@@ -1,0 +1,4 @@
+Bundle-Name: StudentList
+Bundle-SymbolicName: studentlist
+Bundle-Version: 1.0.0
+Export-Package: studentlist.constants
