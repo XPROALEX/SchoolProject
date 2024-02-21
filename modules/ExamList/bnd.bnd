@@ -1,0 +1,4 @@
+Bundle-Name: ExamList
+Bundle-SymbolicName: examlist
+Bundle-Version: 1.0.0
+Export-Package: examlist.constants
