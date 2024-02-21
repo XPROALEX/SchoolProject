@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="esami">
+	<namespace>FOO</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+
+	<!-- Entità Esami -->
+
+	<entity local-service="true" name="Exam" remote-service="true" uuid="false">
+
+		<!-- PK fields -->
+
+		<column name="examId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="studentId" type="long" />
+		<column name="teacherId" type="long" />
+		<!-- subjectOfStudy -->
+		<column name="courseId" type="long" />
+		<column name="examDate" type="Date" />
+		<column name="grade" type="double" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="examId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="findByStudent" return-type="Collection">
+			<finder-column name="studentId" />
+		</finder>
+
+		<finder name="findByTeacher" return-type="Collection">
+			<finder-column name="teacherId" />
+		</finder>
+
+		<finder name="findByCourse" return-type="Collection">
+			<finder-column name="courseId" />
+		</finder>
+
+		<finder name="findByDate" return-type="Collection">
+			<finder-column name="examDate" />
+		</finder>
+
+		<finder name="findByGrade" return-type="Collection">
+			<finder-column name="grade" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+
+	<!-- Entità Corsi -->
+	<entity local-service="true" name="Course" remote-service="true" uuid="false">
+		<!-- PK fields -->
+		<column name="courseId" primary="true" type="long" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="courseName" type="String" />
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="courseId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="findByCourseId" return-type="Collection">
+			<finder-column name="courseId" />
+		</finder>
+
+		<finder name="findByCourseName" return-type="Collection">
+			<finder-column name="courseName" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+
+</service-builder>

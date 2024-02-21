@@ -1,4 +1,0 @@
-Bundle-Name: TeacherList
-Bundle-SymbolicName: teacherlist
-Bundle-Version: 1.0.0
-Export-Package: teacherlist.constants

@@ -1,0 +1,12 @@
+dependencies {
+
+    compileOnly group: "com.liferay.portal", name: "release.portal.api"
+
+    cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.4"
+
+    //importare le service builder
+    implementation project(path: ":modules:Esami:Esami-api")
+    compileOnly project(":modules:Esami:Esami-api")
+    compileOnly project(":modules:Esami:Esami-service")
+
+}

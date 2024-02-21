@@ -1,0 +1,4 @@
+Bundle-Name: GradeAssignment
+Bundle-SymbolicName: gradeassignment
+Bundle-Version: 1.0.0
+Export-Package: gradeassignment.constants

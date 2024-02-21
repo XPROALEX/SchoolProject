@@ -1,0 +1,10 @@
+Bundle-Name: Esami-api
+Bundle-SymbolicName: esami.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	esami.exception,\
+	esami.model,\
+	esami.service,\
+	esami.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../Esami-service/service.xml

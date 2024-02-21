@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="esami.model.Course">
+		<field name="courseId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="courseName" type="String" />
+	</model>
+	<model name="esami.model.Exam">
+		<field name="examId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="studentId" type="long" />
+		<field name="teacherId" type="long" />
+		<field name="courseId" type="long" />
+		<field name="examDate" type="Date" />
+		<field name="grade" type="double" />
+	</model>
+</model-hints>

@@ -1,4 +1,0 @@
-Bundle-Name: ActionPortlet
-Bundle-SymbolicName: actionportlet
-Bundle-Version: 1.0.0
-Export-Package: actionportlet.constants
