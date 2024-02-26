@@ -1,0 +1,4 @@
+Bundle-Name: ExamQuery
+Bundle-SymbolicName: examquery
+Bundle-Version: 1.0.0
+Export-Package: examquery.constants

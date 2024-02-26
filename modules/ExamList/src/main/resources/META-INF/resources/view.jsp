@@ -13,7 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        /* Stile per la tabella */
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -30,14 +37,20 @@
             background-color: #f2f2f2;
         }
 
-        /* Stile per le righe dispari */
+
+        /* style for odd rows */
         tr:nth-child(odd) {
             background-color: #f9f9f9;
         }
 
-        /* Stile per le righe pari */
+        /* style for even rows */
         tr:nth-child(even) {
             background-color: #ffffff;
+        }
+
+        /*  hover effect for rows */
+        tr:hover {
+            background-color: cornflowerblue ;
         }
     </style>
 
@@ -46,6 +59,8 @@
 
 <body>
 
+
+<h1>Tabella degli Esami</h1>
 
 <table>
 
