@@ -84,8 +84,8 @@ public class GradeAssignmentPortlet extends MVCPortlet {
         //get studentsList using getRoleUsers methods (filtered by role)
         //roleId get by DBeaver
         List<User> students = new ArrayList<>();
-        students.addAll(UserLocalServiceUtil.getRoleUsers(32933)); //back end
-        students.addAll(UserLocalServiceUtil.getRoleUsers(32934)); //front end
+        students.addAll(UserLocalServiceUtil.getRoleUsers(32955)); //back end
+        students.addAll(UserLocalServiceUtil.getRoleUsers(32956)); //front end
         renderRequest.setAttribute("students", students);
         super.doView(renderRequest, renderResponse);
     }

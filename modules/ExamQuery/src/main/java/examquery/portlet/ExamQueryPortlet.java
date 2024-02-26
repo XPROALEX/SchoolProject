@@ -83,7 +83,7 @@ public class ExamQueryPortlet extends MVCPortlet {
             return examLocalService.dynamicQuery(examQuery);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
         }
         return new ArrayList<>();
     }
@@ -102,7 +102,7 @@ public class ExamQueryPortlet extends MVCPortlet {
             return examLocalService.dynamicQuery(examQuery);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
         }
         return new ArrayList<>();
     }
@@ -137,7 +137,7 @@ public class ExamQueryPortlet extends MVCPortlet {
             }
             return resultsObj;
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
         }
         return new ArrayList<>();
 
