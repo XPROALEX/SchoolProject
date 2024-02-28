@@ -150,12 +150,14 @@
             <p>Subject of Exam</p>
             <select name="<portlet:namespace></portlet:namespace>subjectOfExam" required>
                 <option value="">*Select*</option>
-                <option value="1">Java</option>
-                <option value="2">SQL</option>
-                <option value="3">HTML</option>
-                <option value="4">CSS</option>
-                <option value="5">JavaScript</option>
+
+                <c:forEach var="subject" items="${courseList}">
+                    <option value="${subject.courseId}">
+                            ${subject.courseName}
+                    </option>
+                </c:forEach>
             </select>
+
         </div>
 
         <div class="item">
