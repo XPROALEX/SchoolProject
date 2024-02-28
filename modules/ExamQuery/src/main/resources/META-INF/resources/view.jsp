@@ -21,11 +21,6 @@
 </aui:form>
 
 
-<c:if test="${not empty findByGradeNoProjection}">
-    <p>Selected value: ${findByGradeNoProjection}</p>
-</c:if>
-
-
 <table>
 
     <tr>

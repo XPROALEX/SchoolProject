@@ -6,7 +6,9 @@ import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.WebKeys;
+import esami.model.Course;
 import esami.model.Exam;
+import esami.service.CourseLocalServiceUtil;
 import esami.service.ExamLocalServiceUtil;
 import gradeassignment.constants.GradeAssignmentPortletKeys;
 import org.osgi.service.component.annotations.Component;
@@ -87,6 +89,12 @@ public class GradeAssignmentPortlet extends MVCPortlet {
         students.addAll(UserLocalServiceUtil.getRoleUsers(32955)); //back end
         students.addAll(UserLocalServiceUtil.getRoleUsers(32956)); //front end
         renderRequest.setAttribute("students", students);
+
+        //get coursesList using getCourses methods
+        List<Course> courseList = CourseLocalServiceUtil.getCourses(-1, -1);
+        renderRequest.setAttribute("courseList", courseList);
+        super.doView(renderRequest, renderResponse);
+
         super.doView(renderRequest, renderResponse);
     }
 }

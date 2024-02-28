@@ -6,10 +6,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import javax.portlet.*;
 
-import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.PropsUtil;
-import esami.model.Course;
-import esami.service.CourseLocalServiceUtil;
 import org.osgi.service.component.annotations.Component;
 
 import java.io.IOException;
@@ -51,20 +48,4 @@ public class ButtonTestPortlet extends MVCPortlet {
         }
     }
 
-    @ProcessAction(name = "addSubjectOfStudy")
-    public void addSubjectOfStudy(ActionRequest actionRequest, ActionResponse actionResponse) {
-        try {
-            long courseCount = CourseLocalServiceUtil.getCoursesCount();
-            Course course = CourseLocalServiceUtil.createCourse(courseCount + 1);
-
-            String subjectOfStudy = ParamUtil.getString(actionRequest, "subjectOfStudy");
-            course.setCourseName(subjectOfStudy);
-
-            CourseLocalServiceUtil.addCourse(course);
-            System.out.println("subjectOfStudyId: " + course.getCourseId() + " subjectOfStudy: " + course.getCourseName());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
