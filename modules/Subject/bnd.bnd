@@ -1,0 +1,4 @@
+Bundle-Name: Subject
+Bundle-SymbolicName: subject
+Bundle-Version: 1.0.0
+Export-Package: subject.constants

@@ -7,9 +7,6 @@
     <portlet:param name="javax.portlet.action" value="myActionCommand"/>
 </portlet:actionURL>
 
-<portlet:actionURL var="addSubjectOfStudyURL">
-    <portlet:param name="javax.portlet.action" value="addSubjectOfStudy"/>
-</portlet:actionURL>
 
 <html>
 
@@ -21,11 +18,6 @@
     <style>
 
         #myForm {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        #subjectOfStudyForm {
             text-align: center;
             margin-top: 20px;
         }
@@ -64,17 +56,6 @@
 </form>
 
 <p>The person who will present the project today is: ${selectedValue}</p>
-
-<div id="subjectOfStudy">
-
-    <h2>Text here to add Subject</h2>
-
-    <form id="subjectOfStudyForm" action="<%= addSubjectOfStudyURL %>" method="post">
-        <input type="text" name="<portlet:namespace></portlet:namespace>subjectOfStudy" required>
-        <button type="submit">Text here to add Subject</button>
-    </form>
-
-</div>
 
 
 </body>

@@ -21,11 +21,6 @@
 </aui:form>
 
 
-<c:if test="${not empty findByGradeNoProjection}">
-    <p>Selected value: ${findByGradeNoProjection}</p>
-</c:if>
-
-
 <table>
 
     <tr>
@@ -63,14 +58,14 @@
         <th>Grade</th>
     </tr>
 
-    <c:forEach var="exam2" items="${getByGradeWithTeacherStudentCourseName}">
+    <c:forEach var="exam" items="${getByGradeWithTeacherStudentCourseName}">
         <tr>
-            <td>${exam2[0]}</td>
-            <td>${exam2[1]}</td>
-            <td>${exam2[2]}</td>
-            <td>${exam2[3]}</td>
-            <td>${exam2[4]}</td>
-            <td>${exam2[5]}</td>
+            <td>${exam[0]}</td>
+            <td>${exam[1]}</td>
+            <td>${exam[2]}</td>
+            <td>${exam[3]}</td>
+            <td>${exam[4]}</td>
+            <td>${exam[5]}</td>
         </tr>
 
     </c:forEach>
